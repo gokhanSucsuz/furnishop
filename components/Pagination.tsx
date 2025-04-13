@@ -1,5 +1,4 @@
 import React from "react";
-import { BiArrowFromLeft } from "react-icons/bi";
 import { IoArrowBackOutline, IoArrowForward } from "react-icons/io5";
 
 const Pagination = () => {

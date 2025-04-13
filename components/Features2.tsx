@@ -1,13 +1,12 @@
 import Image from "next/image";
 import React from "react";
-import { FaCheckCircle } from "react-icons/fa";
 
 const features = [
 	{
 		id: 1,
 		title: "We Create Your Home More Aesthetic",
 		text:
-			"Furnitre power is a software as services for multiperpose business management system, ",
+			"Furniture power is a software as services for multiperpose business management system, ",
 		image: "/feature/Insert Image Here (1).png",
 		icon: "xxx",
 		fTitle: "Valuation Services",
