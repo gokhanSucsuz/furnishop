@@ -1,4 +1,5 @@
 import AllProducts from "@/components/AllProducts";
+import Comments from "@/components/Comments";
 import Features1 from "@/components/Features1";
 import Features from "@/components/Features1";
 import Features2 from "@/components/Features2";
@@ -22,6 +23,9 @@ export default function Home() {
 
 			{/* All Products Section */}
 			<AllProducts />
+
+			{/* Features Section */}
+			<Comments />
 		</main>
 	);
 }

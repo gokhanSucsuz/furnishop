@@ -1,68 +1,69 @@
 import Image from "next/image";
 import React from "react";
+import Pagination from "./Pagination";
 
 const products = [
 	{
 		id: 1,
-		title: "Chair",
+		title: "Ceiling Light",
 		image: "/allproducts/1.png",
-		price: 100,
-		oldPrice: 123
+		price: 75,
+		oldPrice: 82
 	},
 	{
 		id: 2,
-		title: "Chair",
+		title: "Wood Chair",
 		image: "/allproducts/2.png",
-		price: 100,
-		oldPrice: 123
+		price: 50,
+		oldPrice: 70
 	},
 	{
 		id: 3,
-		title: "Chair",
+		title: "Papper Cupboard",
 		image: "/allproducts/3.png",
-		price: 100,
-		oldPrice: 123
+		price: 105,
+		oldPrice: 120
 	},
 	{
 		id: 4,
-		title: "Chair",
+		title: "Ole Gundorse Spring  lorem lorem lorem lorem",
 		image: "/allproducts/4.png",
-		price: 100,
-		oldPrice: 123
+		price: 82,
+		oldPrice: 100
 	},
 	{
 		id: 5,
-		title: "Chair",
+		title: "Treos Seroes 911",
 		image: "/allproducts/5.png",
-		price: 100,
-		oldPrice: 123
+		price: 200,
+		oldPrice: 210
 	},
 	{
 		id: 6,
-		title: "Chair",
+		title: "Multi Bilderman Slibber lorem lorem lorem lorem",
 		image: "/allproducts/6.png",
-		price: 100,
-		oldPrice: 123
+		price: 45,
+		oldPrice: 50
 	},
 	{
 		id: 7,
-		title: "Chair",
+		title: "XORA Corner Desk",
 		image: "/allproducts/7.png",
-		price: 100,
-		oldPrice: 123
+		price: 320,
+		oldPrice: 325
 	},
 	{
 		id: 8,
-		title: "Chair",
+		title: "Black Forest Series Wooden Table",
 		image: "/allproducts/8.png",
-		price: 100,
-		oldPrice: 123
+		price: 225,
+		oldPrice: 240
 	}
 ];
 const AllProducts = () => {
 	return (
-		<div className="flex flex-col py-32 gap-4 items-center justify-center w-[85%] text-center">
-			<div className="flex flex-col gap-4 w-1/2 pb-8">
+		<div className="flex flex-col py-32 gap-4 items-center justify-center w-[85%] ">
+			<div className="flex flex-col gap-4 w-[90%] mx-auto lg:w-1/2 pb-8 text-center">
 				<h1 className="text-4xl font-semibold">All Products</h1>
 				<p className="text-lg font-normal">
 					The products we provide only for you as our service are selected from
@@ -73,22 +74,37 @@ const AllProducts = () => {
 				{products.map(product =>
 					<div
 						key={product.id}
-						className="flex flex-col items-center justify-center gap-4 w-full"
+						className="relative flex flex-col items-center gap-4 w-full"
 					>
-						<div className="relative w-full h-96 card ">
+						<div className="relative w-full h-96 card">
 							<Image
 								src={product.image}
 								alt={product.title}
 								fill
-								className="object-cover"
+								className="object-cover border"
 							/>
-							<h1 className="absolute bottom-0 w-full left-0 py-2 text-2xl font-semibold">
-								{product.title}
-							</h1>
+							<div className="absolute bottom-4 right-4 flex flex-row gap-2">
+								<div className="w-8 h-8 rounded-full text-2xl bg-gray-300 flex items-center justify-center">
+									+
+								</div>
+							</div>
+						</div>
+						<h1 className="w-full py-2 px-6 text-2xl font-semibold">
+							{product.title.substring(0, 19)}
+							{product.title.length > 20 ? "..." : ""}
+						</h1>
+						<div className="flex flex-row w-full gap-4 text-slate-500 items-center justify-start px-6">
+							<span className="flex text-sm font-semibold">
+								${product.price}
+							</span>
+							<span className="flex text-sm line-through">
+								${product.oldPrice}
+							</span>
 						</div>
 					</div>
 				)}
 			</div>
+			<Pagination />
 		</div>
 	);
 };
