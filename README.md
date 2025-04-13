@@ -2,6 +2,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 Figma page: https://www.figma.com/community/file/1116354884928539387
 
+This is project website https://furnishop.gokhansucsuz.tech/ 
+
 ## Getting Started
 
 First, run the development server:
