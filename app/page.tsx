@@ -5,6 +5,7 @@ import Features from "@/components/Features1";
 import Features2 from "@/components/Features2";
 import Hero from "@/components/Hero";
 import Section from "@/components/Section";
+import SubBanner from "@/components/SubBanner";
 
 export default function Home() {
 	return (
@@ -24,8 +25,11 @@ export default function Home() {
 			{/* All Products Section */}
 			<AllProducts />
 
-			{/* Features Section */}
+			{/* Comments Section */}
 			<Comments />
+
+			{/* Subbanner Section */}
+			<SubBanner />
 		</main>
 	);
 }

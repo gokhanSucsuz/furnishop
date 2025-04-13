@@ -14,13 +14,15 @@ const commentary = [
 	}
 ];
 const Comments = () => {
-	return (
-		<div className="flex flex-row items-center justify-center w-full">
+	return <div className="flex flex-row items-center justify-center w-full py-16">
 			<div className="flex flex-col items-center justify-center w-[85%]">
 				<div className="flex gap-4 w-full mx-auto mt-12">
 					{commentary.map(comment =>
-						<div key={comment.id} className="flex w-full">
-							<div className="flex flex-col items-start justify-center w-1/2 gap-8">
+						<div
+							key={comment.id}
+							className="grid grid-cols-1 lg:grid-cols-2 w-full"
+						>
+							<div className="flex flex-col items-start justify-center w-full gap-8">
 								<h1 className="text-4xl font-semibold">
 									What People Are Saying About Us
 								</h1>
@@ -47,7 +49,7 @@ const Comments = () => {
 										{comment.comment}
 									</p>
 								</div>
-								<div className="flex items-center justify-center gap-4">
+								<div className="hidden lg:flex items-center justify-center gap-4">
 									<div className="w-10 h-10 rounded-full text-2xl bg-white flex items-center justify-center shadow-lg">
 										<IoArrowBackOutline />
 									</div>
@@ -57,6 +59,7 @@ const Comments = () => {
 									</div>
 								</div>
 							</div>
+
 							<div className="flex items-center justify-center ">
 								<Image
 									src={comment.image}
@@ -66,12 +69,20 @@ const Comments = () => {
 									className="object-cover w-full h-full rounded-lg"
 								/>
 							</div>
+							<div className="flex lg:hidden items-center justify-center gap-4 py-8">
+								<div className="w-10 h-10 rounded-full text-2xl bg-white flex items-center justify-center shadow-lg">
+									<IoArrowBackOutline />
+								</div>
+
+								<div className="w-10 h-10 rounded-full text-2xl shadow-lg flex items-center justify-center bg-[#286F6C] text-white">
+									<IoArrowForward />
+								</div>
+							</div>
 						</div>
 					)}
 				</div>
 			</div>
-		</div>
-	);
+		</div>;
 };
 
 export default Comments;
