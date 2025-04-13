@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+Figma page: https://www.figma.com/community/file/1116354884928539387
+
 ## Getting Started
 
 First, run the development server:
